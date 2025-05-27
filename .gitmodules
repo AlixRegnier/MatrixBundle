@@ -4,3 +4,7 @@
 [submodule "reorder_json/json"]
 	path = reorder_json/json
 	url = https://github.com/nlohmann/json
+[submodule "kmindex"]
+	path = kmindex
+	url = https://github.com/AlixRegnier/kmindex/
+	branch = compression
