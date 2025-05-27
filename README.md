@@ -1,12 +1,23 @@
 # MatrixBundle
 Repo of repos for testing k-mer matrix compression
 
+## Structure
+
+```bash
+MatrixBundle
+├── bin              #Directory with symbolic links to all programs
+├── BitmatrixShuffle #Submodule to bitmatrix columns reordering
+├── kmindex          #Submodule to kmindex (fork with compression)
+├── Makefile         #Compilation instructions for all programs
+├── recipe.def       #Container Apptainer/Singularity recipe
+└── reorder_json     #Program to reorder kmindex JSON file
+```
 
 ## Compiling
 
 ### 1. Building Apptainer image
 
-At the root of the repo, there is a Singularity/Apptainer recipe called ``recipe.def``.
+At the root of the repo, there is a Apptainer/Singularity recipe called ``recipe.def``.
 It makes easier to compile programs and to use them.
 
 First build the container:
