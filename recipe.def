@@ -1,0 +1,26 @@
+Bootstrap: docker
+From: debian:latest
+
+%post
+	#kmtricks, kmindex and BlockCompressor build dependencies
+	apt update
+	apt upgrade -y
+	apt install -y build-essential autoconf automake autopoint gettext po4a doxygen libtool cmake zlib1g-dev liblzma-dev 
+
+	#Zstd dependencies
+	apt install -y libboost-all-dev libbz2-dev libc6-dev
+	
+	#Tools
+	apt install -y time xxd nano bc
+
+%environment
+	export PATH="$PWD/bin:$PATH"
+	
+%runscript
+	ulimit -n 500000
+
+%labels
+	Author alix.regnier@inria.fr
+
+%help
+	This is a container used to compile kmtricks, kmindex and BlockCompressor/BlockDecompressor
