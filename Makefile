@@ -20,6 +20,9 @@ reorder_json: binary
 	ln -sf $(PWD)/reorder_json/bin/reorder_json $(BINDIR)/reorder_json
 
 kmindex: binary
+	(cd kmindex/thirdparty/kmtricks && ./install.sh -p -q) #Compile mainBlock(Dec/C)ompressorZSTD
 	(cd kmindex && ./install.sh)
+	ln -sf $(PWD)/kmindex/thirdparty/kmtricks/bin/mainBlockCompressorZSTD $(BINDIR)/mainBlockCompressorZSTD
+	ln -sf $(PWD)/kmindex/thirdparty/kmtricks/bin/mainBlockDecompressorZSTD $(BINDIR)/mainBlockDecompressorZSTD
 	ln -sf $(PWD)/kmindex/kmindex_install/bin/kmindex $(BINDIR)/kmindex
 	ln -sf $(PWD)/kmindex/kmindex_install/bin/kmindex-server $(BINDIR)/kmindex-server
