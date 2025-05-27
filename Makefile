@@ -1,18 +1,20 @@
-BINDIR=./bin
+BINDIR=$(PWD)/bin
 
 all: binary BitmatrixShuffle reorder_json kmindex
 
-binary: bin
+binary:
 	mkdir -p ./bin
 
 BitmatrixShuffle: binary
 	make -C ./BitmatrixShuffle
-	ln -s ./BitmatrixShuffle/reorder $(BINDIR)/reorder  
-        ln -s ./BitmatrixShuffle/reverse_reorder $(BINDIR)/reverse_reorder
+	ln -sf $(PWD)/BitmatrixShuffle/reorder $(BINDIR)/reorder
+	ln -sf $(PWD)/BitmatrixShuffle/reverse_reorder $(BINDIR)/reverse_reorder
 
 reorder_json: binary
 	make -C ./reorder_json
-	ln -s ./reorder_json/bin/reorder_json $(BINDIR)/reorder_json
+	ln -sf $(PWD)/reorder_json/bin/reorder_json $(BINDIR)/reorder_json
 
 kmindex: binary
-	(cd kmindex && ./install.sh) #Subcommand
+	(cd kmindex && ./install.sh)
+	ln -sf $(PWD)/kmindex/kmindex_install/kmindex $(BINDIR)/kmindex
+	ln -sf $(PWD)/kmindex/kmindex_install/kmindex-server $(BINDIR)/kmindex-server
