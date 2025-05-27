@@ -67,6 +67,9 @@ or single command
 apptainer exec container.sif [COMMANDLINE]
 ```
 
+### kmindex (compression fork)
+
+For the very moment, the program needs that configuration file (for the size of blocks) is placed in root of index directory (at the same level than ``matrices`` directory).
 ## Other stuff
 
 Useful link if you need to let docker accessing other directories:
