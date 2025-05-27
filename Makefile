@@ -16,5 +16,5 @@ reorder_json: binary
 
 kmindex: binary
 	(cd kmindex && ./install.sh)
-	ln -sf $(PWD)/kmindex/kmindex_install/kmindex $(BINDIR)/kmindex
-	ln -sf $(PWD)/kmindex/kmindex_install/kmindex-server $(BINDIR)/kmindex-server
+	ln -sf $(PWD)/kmindex/kmindex_install/bin/kmindex $(BINDIR)/kmindex
+	ln -sf $(PWD)/kmindex/kmindex_install/bin/kmindex-server $(BINDIR)/kmindex-server
