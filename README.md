@@ -52,7 +52,7 @@ apptainer shell container.sif
 make compile
 ```
 
-And the programs should be compiled
+And the programs should be compiled.
 
 ## Using compiled programs
 
@@ -69,8 +69,9 @@ apptainer exec container.sif [COMMANDLINE]
 
 ### kmindex (compression fork)
 
-For the very moment, the program needs that configuration file (for the size of blocks) is placed in root of index directory (at the same level than ``matrices`` directory).
+For the very moment, the program needs the configuration file (for the size of blocks) to be placed at root of index directory (at the same level than ``matrices`` directory). The file must have this name ``config.cfg``.
+
 ## Other stuff
 
-Useful link if you need to let docker accessing other directories:
+Useful link if you need to let Apptainer accessing other directories:
 <https://apptainer.org/docs/user/main/bind_paths_and_mounts.html>
