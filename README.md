@@ -5,12 +5,12 @@ Repo of repos for testing k-mer matrix compression
 
 ```bash
 MatrixBundle
-├── bin              #Directory with symbolic links to all programs
-├── BitmatrixShuffle #Submodule to bitmatrix columns reordering
-├── kmindex          #Submodule to kmindex (fork with compression)
-├── Makefile         #Compilation instructions for all programs
-├── recipe.def       #Container Apptainer/Singularity recipe
-└── reorder_json     #Program to reorder kmindex JSON file
+├── bin/              #Directory with symbolic links to all programs
+├── BitmatrixShuffle/ #Submodule to bitmatrix columns reordering
+├── kmindex/          #Submodule to kmindex (fork with compression)
+├── Makefile          #Compilation instructions for all programs
+├── recipe.def        #Container Apptainer/Singularity recipe
+└── reorder_json/     #Program to reorder kmindex JSON file
 ```
 
 ## Cloning this repo
