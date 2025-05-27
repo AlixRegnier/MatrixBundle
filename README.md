@@ -6,6 +6,7 @@ Repo of repos for testing k-mer matrix compression
 ```bash
 MatrixBundle
 ├── bin/              #Directory with symbolic links to all programs
+├── config.sh         #Script to build config (needed when compressing by blocks)
 ├── BitmatrixShuffle/ #Submodule to bitmatrix columns reordering
 ├── kmindex/          #Submodule to kmindex (fork with compression)
 ├── Makefile          #Compilation instructions for all programs
