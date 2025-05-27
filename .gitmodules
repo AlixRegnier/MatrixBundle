@@ -1,0 +1,9 @@
+[submodule "BitmatrixShuffle"]
+	path = BitmatrixShuffle
+	url = https://github.com/AlixRegnier/BitmatrixShuffle
+[submodule "kmindex"]
+	path = kmindex
+	url = https://github.com/AlixRegnier/kmindex
+[submodule "reorder_json/json"]
+	path = reorder_json/json
+	url = https://github.com/nlohmann/json
