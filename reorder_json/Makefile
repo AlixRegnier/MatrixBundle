@@ -1,12 +1,15 @@
 FLAGS=-Wall -pedantic -O3
 CPPFLAG=-std=c++17
 CFLAG=-std=c99
-OUTDIR=../bin
+OUTDIR=./bin
 
-all: reorder_index
+all: reorder_json
+
+binary:
+	mkdir -p ./bin
 
 json:
 	make -C ./json
 
-reorder_index: json reorder_index.cpp
-	g++ $(CPPFLAG) $(FLAGS) -o $(OUTDIR)/reorder_index reorder_index.cpp
+reorder_json: binary json reorder_json.cpp
+	g++ $(CPPFLAG) $(FLAGS) -o ./bin/reorder_json reorder_json.cpp

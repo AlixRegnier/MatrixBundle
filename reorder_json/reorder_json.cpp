@@ -38,7 +38,7 @@ int main(int argc, char ** argv)
 {
     if(argc != 5)
     {
-        std::cout << "Usage: reorder_index <order> <index_name> <input> <output>\n\norder\t\tBinary serialized order\nindex_name\tName of corresponding index\ninput\t\tInput JSON file\noutput\t\tOutput JSON file\n\n<input> and <output> can be the same (corresponding file descriptors are not opened simultaneously).\n" << std::endl;
+        std::cout << "Usage: reorder_json <order> <index_name> <input> <output>\n\norder\t\tBinary serialized order\nindex_name\tName of corresponding index\ninput\t\tInput JSON file\noutput\t\tOutput JSON file\n\n<input> and <output> can be the same (corresponding file descriptors are not opened simultaneously).\n" << std::endl;
         return 1;
     }
 
