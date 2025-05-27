@@ -15,11 +15,11 @@ MatrixBundle
 
 ## Cloning this repo
 
-You need to import this repo with this command, it will recursively add submodules (and their submodules)
+You need to import this repo with this command, it will recursively add submodules (and their submodules):
 ```bash
 git clone --recursive https://www.github.com/AlixRegnier/MatrixBundle.git
 ```
-Otherwise, you can clone this repo and use
+Otherwise, you can clone this repo and use:
 ```bash
 git submodule update --recursive --init
 ```
@@ -69,4 +69,4 @@ apptainer exec container.sif [COMMANDLINE]
 ## Other stuff
 
 Useful link if you need to let docker accessing other directories:
-[](https://apptainer.org/docs/user/main/bind_paths_and_mounts.html)
+<https://apptainer.org/docs/user/main/bind_paths_and_mounts.html>
