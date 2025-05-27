@@ -1,6 +1,11 @@
 BINDIR=$(PWD)/bin
 
-all: binary BitmatrixShuffle reorder_json kmindex
+all: warning
+
+warning:
+	@echo "Make sure you have installed all required dependencies/using the given container. Then use 'make compile'."
+
+compile: BitmatrixShuffle reorder_json kmindex
 
 binary:
 	mkdir -p ./bin
